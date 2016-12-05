@@ -13,7 +13,7 @@ freq_out(x)
 tbl_df
 }
 \description{
-Make a frequency table for a factor
+Use this function to count the number of entries at each level of the factor.
 }
 \examples{
 #' freq_out(iris$Species)
