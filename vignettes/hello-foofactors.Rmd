@@ -48,3 +48,17 @@ The `freq_out()` function returns a frequency table as a well-named `tbl_df`:
 ```{r}
 freq_out(x)
 ```
+
+It is often a good idea to identify factors that might be better off as character variable. 
+When the number of levels is equal to the length of the factor, you might want to keep it as character. The `levels_length` functions tests whether this is the case. 
+
+```{r}
+levels(x)
+length(x)
+levels_length(x)
+
+levels(a)
+length(a)
+levels_length(a)
+```
+
