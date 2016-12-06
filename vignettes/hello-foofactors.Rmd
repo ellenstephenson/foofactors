@@ -13,7 +13,7 @@ Factors are a very useful type of variable in R, but they can also drive you nut
 
 Can we soften some of their sharp edges?
 
-Binding two factors via `fbind()`:
+# Binding two factors via `fbind()`:
 
 ```{r}
 library(foofactors)
@@ -33,6 +33,8 @@ The `fbind()` function glues two factors together and returns factor.
 fbind(a, b)
 ```
 
+# Make a frequency table with freq_out()
+
 Often we want a table of frequencies for the levels of a factor. The base `table()` function returns an object of class `table`, which can be inconvenient for downstream work.  Processing with `as.data.frame()` can be helpful but it's a bit clunky.
 
 ```{r}
@@ -48,6 +50,8 @@ The `freq_out()` function returns a frequency table as a well-named `tbl_df`:
 freq_out(x)
 ```
 
+# Compare number of levels and factor length
+
 It is often a good idea to identify factors that might be better off as character variables. 
 
 When the number of levels is equal to the length of the factor, you might want to keep it as character. The `levels_length` functions tests whether this is the case. 
@@ -61,6 +65,8 @@ levels(a)
 length(a)
 levels_length(a)
 ```
+
+# Keep factor levels in order
 
 The `factor()` function is often very useful, but it doesn't always keep the levels in a logical order. 
 
