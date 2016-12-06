@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+This is the README for the foofactors package. This is a toy package made for a course assignment. It is not recommended for general use. Instead use the forcats package. 
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
@@ -11,3 +11,19 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 ```
+
+# foofactors
+
+The foofactors packages contains 4 functions to help make taking control of factors easier and less annoying. 
+
+# To install
+
+
+
+# fbind
+
+# freq_out
+
+# levels_length
+
+# factor_levels
