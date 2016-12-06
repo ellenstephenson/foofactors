@@ -18,12 +18,59 @@ The foofactors packages contains 4 functions to help make taking control of fact
 
 # To install
 
+```{r}
+devtools::install_github("ellenstephenson/foofactors")
+library(foofactors)
+```
 
 
-# fbind
+# fbind()
+
+`fbind()` combines two factors in a way that is more logical than c(a,b)
+
+```{r}
+a <- factor(c("character", "hits", "your", "eyeballs"))
+b <- factor(c("but", "integer", "where it", "counts"))
+c(a,b)
+fbind(a,b)
+```
 
 # freq_out
 
+To get a frequency table for the factor levels, use `freq_out()` function. 
+
+```{r}
+x <- factor(sample(letters[1:5], size = 100, replace = TRUE))
+freq_out(x)
+```
+
+
 # levels_length
 
+Factors that have only one entry for each level might be better left as character. `levels_length()` tests whether the number of levels is equal to the length of the factor. 
+
+```{r}
+x
+levels(x)
+length(x)
+levels_length(x)
+
+a
+levels(a)
+length(a)
+levels_length(a)
+```
+
+
 # factor_levels
+
+`factor()` will put the levels of the new factor in alphabetical order. `factor_levels` creates a factor where the levels are in the order they appear in the dataset. 
+
+```{r}
+time <- c("morning", "noon", "evening")
+factor(time)
+factor_levels(time)
+levels(factor(time)) == time
+```
+
+
